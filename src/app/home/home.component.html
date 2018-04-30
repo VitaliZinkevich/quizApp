@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-12">
+
+    wrong:{{wrong}}
+    right:{{right}}
+    score:{{score}}
+
+  </div>
+<div class="row">
+  <div class="col-12">
+
+    <div class="">
+      {{question}}
+    </div>
+
+    <div id="answerBoard">
+      <div *ngFor='let l of answerBoard; let i = index'
+      (click)='removeLetterFromAnswerBoard(i)'>
+        {{l}}
+      </div>
+    </div>
+
+
+    <div class="">
+      <div id="answer" *ngFor='let l of answer; let i = index' class='border border-primary'
+      (click)='addLetterToAnswerBoard(i)'>
+        {{l}}
+      </div>
+    </div>
+
+  </div>
+  <button (click) = 'skip()'> SKIP</button>
+</div>
+
+
+
+</div>
