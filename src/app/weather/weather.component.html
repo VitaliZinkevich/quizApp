@@ -1,0 +1,82 @@
+<div class="row">
+  <div class="col-12">
+    <div class="d-inline-flex ">
+
+      <input  #city name="city" value="" placeholder="enter your city in eng">
+
+
+
+
+      <button type="button" name="button" (click)='getWeather(city.value)'>Посмотреть погоду</button>
+
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <div class="">
+      {{message}}
+    </div>
+
+      <div *ngIf='weatherView' class="flex-column ">
+
+      <div class="">
+          <h1>{{forWeather.name}}</h1>
+          <h2>{{forWeather.sys.country}}</h2>
+
+
+
+      </div>
+
+      <div class="">
+
+
+          <div class="">
+            <h3>Основные данные</h3>
+              Влажность <strong>{{forWeather.main.humidity}}</strong>
+          </div>
+          <div class="">
+            Температура <strong>{{forWeather.main.temp}}</strong> по Цельсию
+          </div>
+          <div class="">
+            Давление <strong>{{forWeather.main.pressure}}</strong> hectopascal, примерно <strong>{{forWeather.main.pressure / 1000}}</strong> атмосфер
+          </div>
+        </div>
+
+      <div class="">
+        <h3>Солнечный день</h3>
+        <div class="">
+          Восход <strong>{{sunrise| date: 'short'}}</strong>
+        </div>
+        <div class="">
+           Закат <strong>{{sunset| date:'short'}}</strong>
+        </div>
+
+      </div>
+
+      <div class="">
+        <h3>Ветер</h3>
+        <div class="">
+          Скорость <strong>{{forWeather.wind.speed}}</strong> метров в секунду
+        </div>
+        <div class="">
+          Направление <strong>{{forWeather.wind.deg}}</strong> градусов
+        </div>
+
+
+      </div>
+
+
+      <div class="">
+        <h3>Облачность</h3>
+      <strong>{{forWeather.clouds.all}}</strong> %
+
+      </div>
+
+
+      </div>
+
+  </div>
+
+</div>

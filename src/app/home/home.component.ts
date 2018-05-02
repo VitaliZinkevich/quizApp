@@ -113,7 +113,9 @@ if (x === ' ') {
   }
 }).join('')
 
+/*
 String.prototype.shuffle = function () {
+
     var a = this.split(""),
         n = a.length;
 
@@ -124,10 +126,14 @@ String.prototype.shuffle = function () {
         a[j] = tmp;
     }
     return a.join("");
+
 }
+*/
+
 this.answer = this.currentQuestion.answer
 
-this.answer = this.currentQuestion.answer.shuffle().split("");
+
+this.answer = this.currentQuestion.answer/*.shuffle()*/.split("");
 this.answer = this.answer.map (x=>{
 if (x === ' ') {
   return '___'} else {
