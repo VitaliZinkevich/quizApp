@@ -13,6 +13,7 @@ import { WeatherComponent } from './weather/weather.component'
 const appRoutes: Routes = [
   { path: 'weather', component: WeatherComponent },
   { path: 'quiz', component: HomeComponent },
+  { path: '', component: HomeComponent },
 ];
 
 

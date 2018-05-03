@@ -7,7 +7,7 @@ export class QuizService {
   constructor( private http: HttpClient) { }
 
 getQuestions (){
-  //return this.http.get ('http://jservice.io/api/clues');
+  return this.http.get ('http://jservice.io/api/clues');
 }
 
 

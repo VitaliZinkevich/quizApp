@@ -44,7 +44,7 @@ getWeather(city){
   },
 (error) => {
   if (error) {
-  this.message = 'Cant find city like'
+  this.message = `Cant find city like ${city}`
 
 }
 }

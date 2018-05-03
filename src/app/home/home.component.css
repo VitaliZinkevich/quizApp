@@ -1,0 +1,19 @@
+#answer {
+margin: 10px 10px 10px 10px;
+min-width: 50px;
+min-height: 50px;
+text-align: center;
+vertical-align: baseline;
+font-size : 24px;
+}
+
+
+#answerBoard {
+
+font-size : 24px;
+
+}
+
+.answerBoard {
+  margin: 10px 5px 10px 5px;
+}

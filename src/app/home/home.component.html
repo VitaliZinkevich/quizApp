@@ -1,37 +1,38 @@
 <div class="row">
-  <div class="col-12">
-
-    wrong:{{wrong}}
-    right:{{right}}
-    score:{{score}}
-
-  </div>
-<div class="row">
-  <div class="col-12">
-
-    <div class="">
-      {{question}}
-    </div>
-
-    <div id="answerBoard">
-      <div *ngFor='let l of answerBoard; let i = index'
-      (click)='removeLetterFromAnswerBoard(i)'>
-        {{l}}
-      </div>
-    </div>
 
 
-    <div class="">
-      <div id="answer" *ngFor='let l of answer; let i = index' class='border border-primary'
-      (click)='addLetterToAnswerBoard(i)'>
-        {{l}}
-      </div>
-    </div>
+
+  <div class="col-3">
+        <h1>Quiz App</h1>
+<h3>Game Board</h3>
+    wrong answer: {{wrong}}<br>
+    right answer: {{right}}<br>
+    your score: {{score}}<br>
 
   </div>
-  <button (click) = 'skip()'> SKIP</button>
-</div>
+
+<div class="col-9 ">
+  <h3>Current Question</h3>
+  <div class="">
+    {{question}}
+  </div>
+
+  <div id="answerBoard" class="d-flex d-flex-inline flex-wrap">
+
+    <div *ngFor='let l of answerBoard; let i = index' class="answerBoard badge badge-success" (click)='removeLetterFromAnswerBoard(i)'>
+      {{l}} </div>
+
+      </div>
 
 
+        <div class="d-flex d-flex-inline flex-wrap">
+
+          <div id="answer" *ngFor='let l of answer; let i = index' class='border border-primary'
+          (click)='addLetterToAnswerBoard(i)'>
+            {{l}}</div>
+        </div>
+{{rigthAnswer}}
+
+<button class="btn btn-warning" (click)='skip()'>SKIP</button>
 
 </div>
